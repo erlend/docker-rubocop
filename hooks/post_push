@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+name=$(docker buildx inspect | awk '/Name:/{ print $2; exit }')
+
+set -x
+docker buildx rm $name

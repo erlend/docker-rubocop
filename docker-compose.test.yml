@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  sut:
+    build: .
+    entrypoint: ["sh"]
+    command: >
+      -c "rubocop --help | grep -q '^Usage: rubocop'"
